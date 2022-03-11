@@ -1,0 +1,139 @@
+body{
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+  }
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+.nav_links {
+    flex-direction: column;
+    display: flex;
+    }
+
+a:link, a:visited {
+    color: blue;
+    }
+
+.card > header{
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px 50px 0px 0px;
+    }
+
+.pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+
+.card {
+    flex-basis: 450px;
+    border-radius: 50px 50px 0px 0px;
+    }
+
+.gallery > img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+    }
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+      }
+
+@keyframes logo-appear{
+    0%{width: 25px; opacity: 0;}
+    100%{width: 475px; opacity: 1;}
+    }
+
+#logo {
+    animation-name: logo-appear;
+    animation-duration: 5s;
+    }
+
+@media screen and (min-width: 900px){
+
+        .card{
+            flex-basis: 250px;
+            }
+
+        header{
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+                }
+
+        /*header:not(.card, .pricing) {
+            position:fixed;
+        Couldn't figure out how to get the header to not apply to the headers in the non-nav
+       
+                } */
+
+        .nav_links {
+            flex-direction: row;
+            justify-content:right;
+                  }
+
+                }
+
+
+
+    @media print {
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background-image: none;
+            }
+    
+        .nav_links{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            }
+    
+        nav{
+            width: 100%;
+            justify-content: space-evenly;
+            }
+    
+        .pricing{
+            align-self: flex-end;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            }
+    
+    
+        .card{
+            border: solid 2px #45ADDD;
+            flex-basis: 325px;
+            align-self: flex-end;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            }
+    
+        .gallery{
+            display: none;
+            }
+    
+    
+          }
+    
+    
+    @media (prefers-reduced-motion) {
+        #logo {
+            animation: none;
+          }
+            }
+    
+    
